@@ -1,1 +1,95 @@
-# ƒÓÎÊÂÌ ·˚Ú¸ ‡ÎÙ‡‚ËÚ, ÔÓˇ‰ÓÍ ËÏÂÂÚ ÁÌ‡˜ÂÌËÂ, ÌÂ ‰ÓÎÊÌÓ ·˚Ú¸ ˆËÙ Ë ÒËÏ‚ÓÎÓ‚ (·ÛÍ‚˚ ÎË·Ó ‡Ì„Î ÎË·Ó ÛÒ)# œÓ ÒÎÓ‚Û ‚˚‚ÂÒÚË Â„Ó ÌÓÏÂ# œÓ ÌÓÏÂÛ ‚˚‚ÂÒÚË ÒÎÓ‚Ódef init_alphabet():    char = '0'    alphabet = []    lang = ""    while char:        char = str(input("¬‚Â‰ËÚÂ ·ÛÍ‚Û ‡ÎÙ‡‚ËÚ‡ ËÎË enter, ˜ÚÓ·˚ Á‡‚Â¯ËÚ¸\n"))        if len(char) > 1 or not char.isalpha():            if not char:                break            print("¬‚Â‰ËÚÂ Ó‰ÌÛ ¡” ¬”!")            continue        if 97 <= ord(char.lower()) <= 122 and lang == "en" or lang == "":            if not lang:                lang = "en"            alphabet.append(char.lower())        elif 1072 <= ord(char.lower()) <= 1103 and lang == "ru" or lang == "":            if not lang:                lang = "ru"            alphabet.append(char.lower())        else:            continue    return alphabet# n**(k-(1 to k) * i(1 to k)# n = len(alphabet) ; k = len(word) ; i - ÌÓÏÂ ·ÛÍ‚˚ ‚ ‡ÎÙ‡‚ËÚÂ.def lexicographic_numbering_to_num(alphabet, word):    current_word = list(word)    n = len(alphabet)    k = len(current_word)    def find_number(i):        if i == k - 1:            print(alphabet.index(current_word[i]) + 1, end='')            return alphabet.index(current_word[i]) + 1        print(f"{n ** (k - (i + 1))} * {alphabet.index(current_word[i]) + 1} + ", end='')        return (n ** (k - (i + 1)) * (alphabet.index(current_word[i]) + 1)) + find_number(i + 1)    return " = " + str(find_number(0))def lexicographic_numbering_to_word(alphabet, number):    n = len(alphabet)    code = []    def find_word(acc):        if acc // n == 0:            return acc % n        if acc % n == 0:            print(f"{(acc // n - 1)} * {n} + {n}", end=" => ")            code.append(n)            return find_word((acc // n - 1))        print(f"{acc // n} * {n} + {acc % n}", end=" => ")        code.append(acc % n)        return find_word(acc // n)    find_word(number)    word = ""    code.reverse()    for el in code:        word += alphabet[el - 1]    return wordalph = init_alphabet()print(lexicographic_numbering_to_num(alph, "abccb"))print(lexicographic_numbering_to_word(["a", "b", "c"], 321))if __name__ == '__main__':    choice = "1"    while choice:        print("«‰‡‚ÒÚ‚ÛÈÚÂ, ‚˚·ÂËÚÂ ")
+# –î–æ–ª–∂–µ–Ω –±—ã—Ç—å –∞–ª—Ñ–∞–≤–∏—Ç, –ø–æ—Ä—è–¥–æ–∫ –∏–º–µ–µ—Ç –∑–Ω–∞—á–µ–Ω–∏–µ, –Ω–µ –¥–æ–ª–∂–Ω–æ –±—ã—Ç—å —Ü–∏—Ñ—Ä –∏ —Å–∏–º–≤–æ–ª–æ–≤ (–±—É–∫–≤—ã –ª–∏–±–æ –∞–Ω–≥–ª –ª–∏–±–æ —Ä—É—Å)
+# –ü–æ —Å–ª–æ–≤—É –≤—ã–≤–µ—Å—Ç–∏ –µ–≥–æ –Ω–æ–º–µ—Ä
+# –ü–æ –Ω–æ–º–µ—Ä—É –≤—ã–≤–µ—Å—Ç–∏ —Å–ª–æ–≤–æ
+
+def init_alphabet():
+    char = '0'
+    alphabet = []
+    lang = ""
+    while char:
+        char = str(input("–í–≤–µ–¥–∏—Ç–µ –±—É–∫–≤—É –∞–ª—Ñ–∞–≤–∏—Ç–∞ –∏–ª–∏ enter, —á—Ç–æ–±—ã –∑–∞–≤–µ—Ä—à–∏—Ç—å\n"))
+        if len(char) > 1 or not char.isalpha():
+            if not char:
+                break
+            print("–í–≤–µ–¥–∏—Ç–µ –æ–¥–Ω—É –ë–£–ö–í–£!")
+            continue
+
+        if 97 <= ord(char.lower()) <= 122 and lang == "en" or lang == "":
+            if not lang:
+                lang = "en"
+            alphabet.append(char.lower())
+        elif 1072 <= ord(char.lower()) <= 1103 and lang == "ru" or lang == "":
+            if not lang:
+                lang = "ru"
+            alphabet.append(char.lower())
+        else:
+            continue
+    return alphabet
+
+
+# n**(k-(1 to k) * i(1 to k)
+# n = len(alphabet) ; k = len(word) ; i - –Ω–æ–º–µ—Ä –±—É–∫–≤—ã –≤ –∞–ª—Ñ–∞–≤–∏—Ç–µ.
+
+
+def lexicographic_numbering_to_num(alphabet, word):
+    current_word = list(word)
+    n = len(alphabet)
+    k = len(current_word)
+
+	for el in current_word:
+		if el not in alphabet:
+			return f"–ë—É–∫–≤—ã {el} –Ω–µ—Ç –≤ –¥–∞–Ω–Ω–æ–º –∞–ª—Ñ–∞–≤–∏—Ç–µ!"
+
+    def find_number(i):
+        if i == k - 1:
+            print(alphabet.index(current_word[i]) + 1, end='')
+            return alphabet.index(current_word[i]) + 1
+        print(f"{n ** (k - (i + 1))} * {alphabet.index(current_word[i]) + 1} + ", end='')
+        return (n ** (k - (i + 1)) * (alphabet.index(current_word[i]) + 1)) + find_number(i + 1)
+
+    return " = " + str(find_number(0))
+
+
+def lexicographic_numbering_to_word(alphabet, number):
+    n = len(alphabet)
+    code = []
+
+    def find_word(acc):
+        if acc // n == 0:
+            return acc % n
+        if acc % n == 0:
+            print(f"{(acc // n - 1)} * {n} + {n}", end=" => ")
+            code.append(n)
+            return find_word((acc // n - 1))
+        print(f"{acc // n} * {n} + {acc % n}", end=" => ")
+        code.append(acc % n)
+        return find_word(acc // n)
+
+    find_word(number)
+
+    word = ""
+    code.reverse()
+    for el in code:
+        word += alphabet[el - 1]
+
+    return word
+
+if __name__ == '__main__':
+    choice = "main"
+    while choice:
+		choice = input("–ó–¥—Ä–∞–≤—Å—Ç–≤—É–π—Ç–µ, –≤—ã–±–µ—Ä–∏—Ç–µ –æ–¥–∏–Ω –∏–∑ –ø—É–Ω–∫—Ç–æ–≤:\n1. –í–≤–µ—Å—Ç–∏ –∞–ª—Ñ–∞–≤–∏—Ç\n2. –ò–∑ —Å–ª–æ–≤–∞ –≤ —á–∏—Å–ª–æ\n3. –ò–∑ —á–∏—Å–ª–∞ –≤ —Å–ª–æ–≤–æ")
+		if choice == "1":
+			alph = init_alphabet()
+		elif choice == "2":
+			if not alph:
+				alph = init_alphabet()
+			word = input("–í–≤–µ–¥–∏—Ç–µ —Å–ª–æ–≤–æ: ")
+			print(lexicographic_numbering_to_num(alph, word))
+		elif choice == "3":
+			if not alph:
+				alph = init_alphabet()
+			number = int(input("–í–≤–µ–¥–∏—Ç–µ —Ü–µ–ª–æ–µ —á–∏—Å–ª–æ: "))
+			print(lexicographic_numbering_to_num(alph, number))
+		else:
+			print("–ù–µ—Ç —Ç–∞–∫–æ–≥–æ –ø—É–Ω–∫—Ç–∞ :(")
+			
