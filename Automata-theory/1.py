@@ -74,6 +74,7 @@ def lexicographic_numbering_to_word(alphabet, number):
 
     return word
 
+
 if __name__ == '__main__':
     choice = "main"
     while choice:

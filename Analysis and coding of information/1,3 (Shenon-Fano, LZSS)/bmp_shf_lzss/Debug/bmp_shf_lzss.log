@@ -1,0 +1,20 @@
+﻿  bmp_shf_lzss.cpp
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(80,32): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(83,35): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(162,19): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(166,24): warning C4244: аргумент: преобразование "double" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(174,35): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(202,36): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(308,32): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(311,35): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(317,15): warning C4018: >=: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(324,37): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(334,32): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(348,32): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(382,32): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Никита\source\repos\bmp_shf_lzss\bmp_shf_lzss\bmp_shf_lzss.cpp(418,32): warning C4018: <: несоответствие типов со знаком и без знака
+  bmp_shf_lzss.vcxproj -> C:\Users\Никита\source\repos\bmp_shf_lzss\Debug\bmp_shf_lzss.exe
