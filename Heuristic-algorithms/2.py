@@ -10,6 +10,7 @@ for arr in m:
     print(arr)
 print("======")
 
+
 def min_alg(matrix, proc_count):
     processors = [0 for i in range(proc_count)]
     sch = ["" for i in range(proc_count)]
@@ -22,6 +23,7 @@ def min_alg(matrix, proc_count):
         print(f"{arr} {sum(arr)}")
     print(sch)
     print(processors)
+
 
 def schedule_alg(matrix, proc_count):
     c_matrix = copy.deepcopy(matrix)
@@ -43,6 +45,7 @@ def schedule_alg(matrix, proc_count):
     print(f"Load of processors: {processors}")
     # print(f"Schedule: {sch}")
     return c_matrix
+
 
 def to_down(matrix):
     c_matrix = copy.deepcopy(matrix)
