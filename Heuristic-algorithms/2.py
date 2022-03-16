@@ -2,8 +2,8 @@ import random
 import copy
 
 N = 4
-M = 8
-t1, t2 = 10, 22
+M = 11
+t1, t2 = 15, 30
 
 m = [[random.randint(t1, t2) for i in range(N)] for j in range(M)]
 for arr in m:
@@ -27,17 +27,23 @@ def min_alg(matrix, proc_count):
 
 def schedule_alg(matrix, proc_count):
     c_matrix = copy.deepcopy(matrix)
+
     processors = [0 for i in range(proc_count)]
     sch = ["" for i in range(proc_count)]
     for i in range(len(c_matrix)):
         min_i = c_matrix[i].index(min(c_matrix[i]))
+
+        for j in range(i+1, len(c_matrix)):
+            c_matrix[j][min_i] -= processors[min_i]
+
         processors[min_i] = c_matrix[i][min_i]
         for j in range(len(c_matrix[i])):
             if j != min_i:
                 c_matrix[i][j] = 0
 
         for j in range(i+1, len(c_matrix)):
-            c_matrix[j][min_i] += c_matrix[i][min_i]
+            c_matrix[j][min_i] += processors[min_i]
+
         print(c_matrix[i])
         # sch[min_i] += f"{c_matrix[i][min_i]} "
 
