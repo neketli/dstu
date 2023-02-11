@@ -1,0 +1,11 @@
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\bin\Debug\data-protection-3.exe.config
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\bin\Debug\data-protection-3.exe
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\bin\Debug\data-protection-3.pdb
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\obj\Debug\data-protection-3.csproj.AssemblyReference.cache
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\obj\Debug\data_protection_3.Properties.Resources.resources
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\obj\Debug\data-protection-3.csproj.GenerateResource.cache
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\obj\Debug\data-protection-3.csproj.CoreCompileInputs.cache
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\obj\Debug\data-protection-3.exe
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\obj\Debug\data-protection-3.pdb
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\obj\Debug\data_protection_3.Login.resources
+C:\Users\Никита\source\repos\data-protection-3\data-protection-3\obj\Debug\data_protection_3.KeyboardInput.resources
